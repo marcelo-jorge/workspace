@@ -1,28 +1,41 @@
-/*
-h1{
-    font-family: serif;
+.container{
+    margin: 0 auto;
+    width: 940px;
 }
-h2{
-    font-family: sans-serif;
+header{
+    position: relative;
 }
-p{
-    font-family: monospace;
-    color: red;
-    background-color: yellow;
+.menu-opcoes{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
-*/
+.sacola{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    font-size: 14px;
+    padding-right: 35px;
+    padding-top: 8px;
+    text-align: right;
+    width: 140px;
+}
+.menu-opcoes ul{
+    font-size: 15px;    
+}
+.menu-opcoes ul li{
+    display: inline;
+    margin-left: 20px;
+}
+.menu-opcoes a{
+    color: #003366;
+}
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    border: solid red 1px;
-    /*deixando o fundo ridiculo */
-    background-color: gold;
-}
-h1{
-    background-image: url(sobre-background.jpg);
-}
-p{
-    text-align: justify;
-}
-.p4{
-    font-style: italic;
+    color: #333333;
+    font-family:  "Lucida Sans Unicode","Lucida Grande", sans-serif;
 }
