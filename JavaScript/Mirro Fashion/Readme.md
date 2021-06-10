@@ -14,9 +14,13 @@ Inicialmente foi criado o arquivo sobre.html  posteriormente estilizado com sobr
 
 em seguida estou desenvolvendo o index.html.
 
-05/06/2021
+**Cabeçalho**
 
 nesta segunda parte foram aplicados os conceitos de html semantico, estilização com classes, css reset, utulização de block ou inline, position: static, relative, fixed e absolute.
 
 Todos os conceitos foram utilizados para desenvolver o cabeçalho do site, utilizado nas paginas existentes index.html e sobre.html.
+
+**Corpo do site e Rodapé**
+
+nesta terceira fase foram aplicados os conceitos formulários, Float e clear, cascata e herança no css, display inline-block, inherit, substituição de texto por imagem. truque para usar imagem como icone.
 
