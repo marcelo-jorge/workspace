@@ -106,3 +106,14 @@ footer .container{
     float: left;
     margin-left: 25px;
 }
+/*Inicio seletores , pseudo-classes e pseudo elementos*/
+p::first-letter{
+    font-weight: bold;
+}
+h1 + p{
+    text-indent: 0;
+}
+:not(p) + p::first-line{
+    font-variant: small-caps;
+}
+/*Fim seletores , pseudo-classes e pseudo elementos*/

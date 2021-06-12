@@ -24,3 +24,6 @@ Todos os conceitos foram utilizados para desenvolver o cabeçalho do site, utili
 
 nesta terceira fase foram aplicados os conceitos formulários, Float e clear, cascata e herança no css, display inline-block, inherit, substituição de texto por imagem. truque para usar imagem como icone.
 
+**Melhorando a aparencia**
+
+nesta quarta fase implementarei o conceito de seletores, pseudo-classes e pseudo- elementos na pagina sobre.html e index.html. Border-radius, text-shadow,box-shadow, opacidade e rgba, Prefixos, gradientes, Progressive enhancement e graceful degradation, transitions, transforms.
