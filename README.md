@@ -16,4 +16,4 @@ Inglês Intermediario e cursando no momento(2021).
 
 ## Conhecimentos
 
-Java, JavaScript, HTML, CSS, SpringBoot, SpringData, MySQL.
+Java, JavaScript, HTML5, CSS3, SpringBoot, SpringData, MySQL, Git.
