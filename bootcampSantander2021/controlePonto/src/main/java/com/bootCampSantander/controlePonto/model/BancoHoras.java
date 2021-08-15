@@ -26,12 +26,11 @@ public class BancoHoras {
         private long idBancoHoras;
         private long idMovimentacao;
         private long idUsuario;
-
-
     }
 
     @EmbeddedId
     private BancoHorasId bancoHorasId;
+
     private LocalDateTime dataTrabalhada;
     private BigDecimal quantidadeHoras;
     private BigDecimal saldoHoras;

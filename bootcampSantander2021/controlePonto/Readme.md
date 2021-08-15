@@ -23,3 +23,10 @@ Banco de Dados: H2
 2 parte:
 
 * execução e configuração do banco de dados h2 na memoria
+
+3 parte:
+
+* definição dos acessos
+* banco de dados localhost:8081/h2
+* documentação localhost:8081/swagger-ui.html
+* criação dos cruds de acesso create, update, delete e select por id e todos.
