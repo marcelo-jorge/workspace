@@ -1,7 +1,6 @@
 package com.bootCampSantander.controlePonto.model;
 
 import lombok.*;
-import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +14,6 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-@Audited
 public class NivelAcesso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

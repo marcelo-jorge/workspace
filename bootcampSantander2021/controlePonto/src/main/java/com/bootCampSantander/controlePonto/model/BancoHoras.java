@@ -18,10 +18,10 @@ import java.time.LocalDateTime;
 @Entity
 public class BancoHoras {
 
+    @AllArgsConstructor
+    @NoArgsConstructor
     @EqualsAndHashCode
     @Embeddable
-    @Getter
-    @Setter
     public  class BancoHorasId implements Serializable {
         private long idBancoHoras;
         private long idMovimentacao;

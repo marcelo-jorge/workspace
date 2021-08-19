@@ -1,7 +1,6 @@
 package com.bootCampSantander.controlePonto.model;
 
 import lombok.*;
-import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +14,6 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-@Audited
 public class Empresa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +21,7 @@ public class Empresa {
     private String descricao;
     private String cnpj;
     private String endereco;
-    private String bairo;
+    private String bairro;
     private String cidade;
     private String estado;
     private String telefone;

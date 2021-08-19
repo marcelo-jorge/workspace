@@ -1,52 +1,56 @@
 package com.bootCampSantander.controlePonto.controller;
 
 import com.bootCampSantander.controlePonto.model.JornadaTrabalho;
-import com.bootCampSantander.controlePonto.service.JornadaService;
+import com.bootCampSantander.controlePonto.service.JornadaTrabalhoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/Jornada")
+@RequestMapping("/JornadaTrabalho")
 public class JornadaTrabalhoController {
 
     @Autowired
-    JornadaService jornadaService;
+    JornadaTrabalhoService jornadaTrabalhoService;
 
     //inserir
     @PostMapping
-    public JornadaTrabalho createJornada(@RequestBody JornadaTrabalho jornadaTrabalho){
-        return jornadaService.save(jornadaTrabalho);
-    }
-
-    //lista todos
-    @GetMapping
-    public List<JornadaTrabalho> getJornada(){
-        return jornadaService.finAll();
-    }
-
-    //buscar por id
-    @GetMapping("/{idJornada}")
-    public ResponseEntity<JornadaTrabalho> getJornadaById(@PathVariable("idJornada") Long idJornada) throws Exception {
-        return ResponseEntity.ok(jornadaService.getById(idJornada).orElseThrow(() -> new Exception("Jornada não Encontrada")));
+    public JornadaTrabalho create(@RequestBody JornadaTrabalho jornadaTrabalho){
+        return jornadaTrabalhoService.create(jornadaTrabalho);
     }
 
     //atualizar
     @PutMapping
-    public JornadaTrabalho updateJornada(@RequestBody JornadaTrabalho jornadaTrabalho){
-        return jornadaService.updateJornada(jornadaTrabalho);
+    public JornadaTrabalho update(@RequestBody JornadaTrabalho jornadaTrabalho){
+        return jornadaTrabalhoService.update(jornadaTrabalho);
     }
 
     //deletar
     @DeleteMapping("/{idJornada}")
-    public ResponseEntity deleteByID(@PathVariable("idJornada") Long idJornada) throws Exception {
+    public HttpStatus delete(@PathVariable("idJornada") Long idJornada) throws Exception {
         try {
-            jornadaService.deleteJornada(idJornada);
+            jornadaTrabalhoService.delete(idJornada);
+            return HttpStatus.OK;
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            return HttpStatus.valueOf(e.getMessage());
         }
-        return (ResponseEntity<JornadaTrabalho>) ResponseEntity.ok();
     }
+
+    //lista todos
+    @GetMapping
+    public List<JornadaTrabalho> findAll(){
+        return jornadaTrabalhoService.findAll();
+    }
+
+    //buscar por id
+    @GetMapping("/{idJornada}")
+    public ResponseEntity<JornadaTrabalho> findById(@PathVariable("idJornada") Long idJornada) throws Exception {
+        return ResponseEntity.ok(jornadaTrabalhoService.findById(idJornada).orElseThrow(
+                () -> new Exception("Jornada não Encontrada")
+        ));
+    }
+
 }
